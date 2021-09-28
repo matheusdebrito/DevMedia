@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Formulários em HTML5</title>
+    <meta name="description" content="Aula sobre formulários em HTML5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="robots" content="nofollow">
+<!--
+    ----------------FORMULÁRIOS--------------------------------
+    -Para usar um formulário usamos a tag <form></form>
+
+    -A tag <label></label> é usada para dar um título ou nome ao formulário. É aquilo que aparece antes do formulário
+    
+    -A tag <input> cria o formulário e pode ser alterada com o atributo type="". Ex: <input type="email"> para criar um formulário de email
+    ou <input type="password"> para um formulário de senha
+    
+    -O atributo type="email" para email 
+    | type="password" para senha 
+    | type="text" para texto 
+    | type="file" para arquivos e com o atributo accept="" podemos dizer para aceitar apenas determinado tipo de arquivo 
+    | type="date" para datas 
+    | type="number" min="1" max="10" para números. Este tipo tem dois atributos especiais o min e o max  
+    | type="radio" usado para o usuário escolher entre opções. O exemplo está no código a baixo 
+    | type="checkbox" é usado por exemplo para saber se o usuário deseja ir para a lista de emails do site e receber promoções
+    
+    -Usando o atributo placeholder="" usado dentro da tag <input> pode colocar um texto de exemplo para o preenchimento do formulário. 
+    Ex: <input type="email" placeholder="Ex:seuemail@gmail.com">
+
+    -A tag <select> é usada para disponibilizar opções para o usuário como consta no código abaixo.
+    
+    -A tag <textarea> pode ser usada para o usuário digiar texto de forma livre podendo quebrar linhas. O atributo maxlength="" define
+    o número máximo de caracteres que o usuário pode digitar
+
+    -A tag <fieldset></fieldset> Serve para agrupar os formulários. Usando em conjunto a tag <legende></legende>    podemos dar um nome a esta sessão.
+
+    -A  tag <button></button> cria um botão conforme exemplificado no código.
+
+    -Usando o atributo required em um input, select ou textarea tornamos obrigatório o preenchimento do campo
+
+    -Usando o atributo minlength e maxlength podemos colocar um limite mínimo e um máximo de caracteres
+
+    -O atributo checked garante que a opção estará marcada assim que o usuário entrar na página como foi feito com o sexo por exemploo  
+
+-->
+</head>
+<body>
+    <form method="GET" action="link do servidor que receberá os dados">
+        <fieldset>
+            <legend>Conta</legend>
+            <div>
+                <label>Email:</label>
+                <input type="email" placeholder="Ex:matheus@gmail.com" name="email" required minlength="5" maxlength="256">
+            </div>
+            <div>
+                <label>Senha:</label>
+                <input type="password" name="senha">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legende>Dados Pessoais</legende>
+            <div>
+                <label>Nome:</label>
+                <input type="text" placeholder="Ex:Matheus" name="nome">
+            </div>
+            <div>
+                <label>Telefone:</label>
+                <input type="text" placeholder="Ex:(21) 9 9999-9999" name="telefone">
+            </div>
+            <div>
+                <label>Sexo:</label>
+                <input type="radio" value="Masculino" name="sexo" checked>
+                <label>Masculino</label>
+                <input type="radio" value="Feminino"name="sexo"> 
+                <label>Feminino</label>
+            </div>
+            <div>
+                <label>Data de nascimento:</label>
+                <input type="date" name="nascimento">
+            </div>
+            <div>
+                <label>Foto de perfil:</label>
+                <input type="file" accept="image/*" name="foto">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Endereço</legend>
+            <div>
+                <label>Rua:</label>
+                <input type="text" name="rua">
+            </div>
+            <div>
+                <label>Complemento</label>
+                <input type="text" name="complemento">
+            </div>
+            <div>
+                <label>Número</label>
+                <input type="number" min="0" max="10" name="numero">
+            </div>
+            <div>
+                <label>Cidade</label>
+                <input type="text" name="cidade">
+            </div>
+            <div>
+                <label>Estado:</label>
+                <select name="estado">
+                    <option></option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legende>Anuncio</legende>
+            <div>
+                <label>Como voce conheceu a Hello Pizza ?</label>
+                <textarea maxlength="30" placeholder="teste" name="como_conheceu_o_site"></textarea>
+            </div>
+            <div>
+                <input type="checkbox" checked name="receber_anuncio">
+                <label>Deseja receber ofertas por e-mail ?</label>
+            </div>
+        </fieldset>
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>

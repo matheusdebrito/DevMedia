@@ -1,0 +1,7 @@
+-negrito = font-weight: bold;
+-italico = font-style: italic;
+-cor = color: red;
+-tamanho da fonte = font-size: 14px;
+-fonte = font-family: "arial black"; quando a fonte tem mais de uma palavra precisa ficar envolvida entre ""
+-alinhamento = text-align:center, right, left, justify;
+-
