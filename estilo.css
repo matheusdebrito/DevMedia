@@ -1,0 +1,28 @@
+*{box-sizing:border-box;}
+nav{background-color: darkslategrey; height: 20px; max-height:20px;}
+
+nav #lista{
+    display:flex; 
+    position:static;
+    right: 1px;   
+}
+
+nav #lista li{border:solid 0px black; padding:0px; box-sizing: content-box; width: 80px;}
+
+nav #lista li ul{
+    display:flex;
+    flex-direction:column;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+    border-radius: 10px;
+}
+
+nav #lista li:hover ul{display:inline; margin-top:20px; padding: 0px; position:relative;}
+
+nav #lista li:hover{background-color:darkslategray;}
+
+nav #lista li ul a:hover li{background-color: lightblue;}
+
+nav #lista li ul a{text-decoration: none; color:black;}
